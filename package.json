@@ -1,0 +1,25 @@
+{
+  "name": "comparador-de-textos",
+  "version": "1.0.0",
+  "description": "Aplicación web para comparar textos y revisar errores ortográficos. Proyecto académico UNISANGIL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No hay pruebas automatizadas configuradas\""
+  },
+  "keywords": [
+    "comparador",
+    "textos",
+    "javascript",
+    "express",
+    "languagetool"
+  ],
+  "author": "Proyecto académico UNISANGIL",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0"
+  }
+}

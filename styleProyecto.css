@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F0F4F7;
+    color: #34404A;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+
+.encabezado {
+    background-color: #344E68;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.encabezado .container {
+    position: relative;
+}
+
+.encabezado .container > .d-flex {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.encabezado h1 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.encabezado p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Botón de modo oscuro */
+
+#modo {
+    background-color: #FFFFFF;
+    color: #344E68;
+    border: 1px solid #FFFFFF;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#modo:hover {
+    background-color: #DCE8EF;
+}
+
+/* Contenido principal */
+
+main.container {
+    max-width: 1150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 22px;
+    margin-bottom: 18px;
+    border: 1px solid #D5E0E7;
+    border-radius: 10px;
+}
+
+/* Cuadros de texto */
+
+.contenedor-textos {
+    width: 100%;
+}
+
+.contenedor-textos .row {
+    width: 100%;
+    margin: 0;
+}
+
+.grupo-texto {
+    width: 100%;
+    min-width: 0;
+}
+
+.grupo-texto label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #344E68;
+}
+
+.grupo-texto textarea.form-control {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    padding: 12px;
+    border: 1px solid #71818E;
+    border-radius: 7px;
+    background-color: #F7F9FA;
+    color: #34404A;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+/* Botones */
+
+.acciones {
+    text-align: center;
+}
+
+/* Botón comparar */
+
+#btnComparar {
+    background-color: #344E68;
+    color: #FFFFFF;
+    border: 1px solid #344E68;
+    padding: 11px 21px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btnComparar:hover {
+    background-color: #263C50;
+    border-color: #263C50;
+}
+
+/* Botón revisar */
+
+#btnCorregir {
+    background-color: #28645F;
+    color: #FFFFFF;
+    border: 1px solid #28645F;
+    padding: 11px 21px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btnCorregir:hover {
+    background-color: #1D4D49;
+    border-color: #1D4D49;
+}
+
+/* Botón limpiar */
+
+#btnLimpiar {
+    background-color: #A34E35;
+    color: #FFFFFF;
+    border: 1px solid #A34E35;
+    padding: 11px 21px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#btnLimpiar:hover {
+    background-color: #783A28;
+    border-color: #783A28;
+}
+
+button:disabled {
+    background-color: #666666;
+    color: #FFFFFF;
+    cursor: not-allowed;
+}
+
+/* Resultados */
+
+.resultados h2 {
+    color: #344E68;
+    font-size: 22px;
+    margin: 0 0 14px;
+}
+
+.resultado-contenido {
+    width: 100%;
+    min-height: 110px;
+    padding: 18px;
+    border: 1px solid #71818E;
+    border-radius: 7px;
+    background-color: #F7F9FA;
+    color: #34404A;
+    overflow-wrap: anywhere;
+}
+
+#comparacion {
+    line-height: 2.2;
+}
+
+/* Diferencias */
+
+.igual {
+    background-color: #DDDDDD;
+    color: #292929;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.agregado {
+    background-color: #D4EDDA;
+    color: #155724;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.eliminado {
+    background-color: #F5D2D5;
+    color: #842029;
+    text-decoration: line-through;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.modificado {
+    background-color: #FFEDBD;
+    color: #664D03;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+/* Leyenda */
+
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 12px;
+    background-color: #F0F4F7;
+    border-radius: 6px;
+}
+
+.leyenda h3 {
+    width: 100%;
+    color: #344E68;
+    font-size: 16px;
+    margin: 0;
+}
+
+.leyenda span {
+    font-size: 13px;
+}
+
+/* Revisión ortográfica */
+
+#correcciones h3 {
+    color: #344E68;
+    margin-bottom: 12px;
+}
+
+#correcciones div {
+    border-bottom: 1px solid #D5E0E7;
+    padding: 10px 0;
+}
+
+#correcciones p {
+    margin-bottom: 8px;
+}
+
+#correcciones button {
+    margin: 5px;
+    padding: 9px 13px;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #263C50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Quitar el enfoque al hacer clic con el mouse */
+
+button:focus,
+.grupo-texto textarea.form-control:focus,
+#comparacion:focus,
+#correcciones:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.grupo-texto textarea.form-control:focus {
+    border-color: #71818E !important;
+}
+
+/* Enfoque al navegar con TAB en modo claro */
+
+body.uso-teclado button:focus,
+body.uso-teclado .grupo-texto textarea.form-control:focus,
+body.uso-teclado #comparacion:focus,
+body.uso-teclado #correcciones:focus,
+body.uso-teclado #modo:focus {
+    outline: 3px solid #000000 !important;
+    outline-offset: 3px;
+    box-shadow: none !important;
+}
+
+/* Modo oscuro */
+
+[data-bs-theme="dark"] body {
+    background-color: #17232E;
+    color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .encabezado {
+    background-color: #263C50;
+}
+
+[data-bs-theme="dark"] section {
+    background-color: #26333F;
+    border-color: #526574;
+}
+
+[data-bs-theme="dark"] #modo {
+    background-color: #C5E3E6;
+    color: #17232E;
+    border-color: #C5E3E6;
+}
+
+[data-bs-theme="dark"] #modo:hover {
+    background-color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .grupo-texto label {
+    color: #C5E3E6;
+}
+
+[data-bs-theme="dark"] .grupo-texto textarea.form-control,
+[data-bs-theme="dark"] .resultado-contenido {
+    background-color: #1D2A35;
+    color: #FFFFFF;
+    border-color: #A3B5C2;
+}
+
+/* Botones en modo oscuro */
+
+[data-bs-theme="dark"] #btnComparar {
+    background-color: #496783;
+    border-color: #496783;
+    color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] #btnComparar:hover {
+    background-color: #344E68;
+    border-color: #344E68;
+}
+
+[data-bs-theme="dark"] #btnCorregir {
+    background-color: #397C73;
+    border-color: #397C73;
+    color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] #btnCorregir:hover {
+    background-color: #28645F;
+    border-color: #28645F;
+}
+
+[data-bs-theme="dark"] #btnLimpiar {
+    background-color: #B96349;
+    border-color: #B96349;
+    color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] #btnLimpiar:hover {
+    background-color: #934832;
+    border-color: #934832;
+}
+
+/* Títulos y leyenda en modo oscuro */
+
+[data-bs-theme="dark"] .resultados h2,
+[data-bs-theme="dark"] #correcciones h3,
+[data-bs-theme="dark"] .leyenda h3 {
+    color: #C5E3E6;
+}
+
+[data-bs-theme="dark"] .leyenda {
+    background-color: #263C50;
+}
+
+[data-bs-theme="dark"] #correcciones div {
+    border-bottom-color: #526574;
+}
+
+[data-bs-theme="dark"] footer {
+    background-color: #101923;
+}
+
+/* Enfoque al navegar con TAB en modo oscuro */
+
+[data-bs-theme="dark"] body.uso-teclado button:focus,
+[data-bs-theme="dark"] body.uso-teclado .grupo-texto textarea.form-control:focus,
+[data-bs-theme="dark"] body.uso-teclado #comparacion:focus,
+[data-bs-theme="dark"] body.uso-teclado #correcciones:focus,
+[data-bs-theme="dark"] body.uso-teclado #modo:focus {
+    outline: 3px solid #FFFFFF !important;
+    outline-offset: 3px;
+    box-shadow: none !important;
+}
+
+/* Diseño para celulares */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        padding: 20px 15px;
+    }
+
+    .encabezado .container > .d-flex {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    main.container {
+        width: 94%;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .contenedor-textos .row {
+        row-gap: 15px;
+    }
+
+    .grupo-texto textarea.form-control {
+        min-height: 190px;
+    }
+
+    .acciones .d-flex {
+        flex-direction: column;
+    }
+
+    .acciones button {
+        width: 100%;
+    }
+
+    .leyenda {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}

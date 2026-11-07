@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="color-scheme" content="light">
+
+    <meta
+        name="description"
+        content="Aplicación web para comparar textos, identificar diferencias y revisar errores ortográficos."
+    >
+
+    <meta name="author" content="Proyecto académico UNISANGIL">
+    <meta name="theme-color" content="#F0F4F7">
+
+    <title>Comparador de Textos</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/styleProyecto.css">
+</head>
+
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado py-4">
+        <div class="container">
+
+            <div class="d-flex justify-content-end mb-3">
+                <button
+                    type="button"
+                    id="modo"
+                    class="btn btn-light"
+                    aria-label="Cambiar al modo oscuro"
+                    aria-pressed="false"
+                >
+                    Modo oscuro
+                </button>
+            </div>
+
+            <div class="text-center">
+                <h1>Comparador de Textos</h1>
+
+                <p>
+                    Compara dos textos, identifica sus diferencias
+                    y revisa su escritura.
+                </p>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-4" id="contenido">
+
+        <!-- ÁREA DE COMPARACIÓN -->
+        <section
+            class="contenedor-textos mb-4"
+            aria-label="Área de comparación de textos"
+        >
+
+            <div class="row g-4">
+
+                <!-- TEXTO ORIGINAL -->
+                <div class="col-12 col-md-6">
+                    <div class="grupo-texto">
+
+                        <label for="textoOriginal" class="form-label">
+                            Texto original
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="textoOriginal"
+                            placeholder="Escribe o pega aquí el texto original..."
+                            rows="10"
+                            maxlength="20000"
+                            aria-describedby="ayudaOriginal"
+                        ></textarea>
+
+                        <small id="ayudaOriginal" class="form-text">
+                            Máximo 20.000 caracteres.
+                        </small>
+
+                    </div>
+                </div>
+
+
+                <!-- TEXTO NUEVO -->
+                <div class="col-12 col-md-6">
+                    <div class="grupo-texto">
+
+                        <label for="textoNuevo" class="form-label">
+                            Texto nuevo
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="textoNuevo"
+                            placeholder="Escribe o pega aquí el texto que deseas comparar..."
+                            rows="10"
+                            maxlength="20000"
+                            aria-describedby="ayudaNuevo"
+                        ></textarea>
+
+                        <small id="ayudaNuevo" class="form-text">
+                            Máximo 20.000 caracteres.
+                        </small>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BOTONES -->
+        <section
+            class="acciones mb-4"
+            aria-label="Acciones disponibles"
+        >
+
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnComparar"
+                >
+                    Comparar textos
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnCorregir"
+                >
+                    Revisar ortografía
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="btnLimpiar"
+                >
+                    Limpiar
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTADO DE COMPARACIÓN -->
+        <section class="resultados mb-4">
+
+            <h2>Resultado de la comparación</h2>
+
+            <div
+                id="comparacion"
+                class="resultado-contenido"
+                role="region"
+                aria-label="Resultado de la comparación"
+                aria-live="polite"
+                aria-atomic="true"
+                tabindex="0"
+            >
+                <p>
+                    El resultado de la comparación aparecerá aquí.
+                </p>
+            </div>
+
+
+            <!-- LEYENDA -->
+            <div class="leyenda mt-3">
+
+                <h3>Significado de los colores</h3>
+
+                <p>
+                    <span class="igual">Palabras iguales</span>
+                </p>
+
+                <p>
+                    <span class="eliminado">Palabras eliminadas</span>
+                </p>
+
+                <p>
+                    <span class="agregado">Palabras agregadas</span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVISIÓN ORTOGRÁFICA -->
+        <section class="resultados mb-4">
+
+            <h2>Revisión ortográfica</h2>
+
+            <div
+                id="correcciones"
+                class="resultado-contenido"
+                role="region"
+                aria-label="Resultados de la revisión ortográfica"
+                aria-live="polite"
+                aria-atomic="true"
+                tabindex="0"
+            >
+                <p>
+                    Los resultados de la revisión aparecerán aquí.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="py-3">
+
+        <div class="container text-center">
+
+            <p class="mb-0">
+                Comparador de Textos | Proyecto académico UNISANGIL
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MÓDULO PRINCIPAL -->
+    <script type="module" src="/JS/script.mjs"></script>
+
+</body>
+</html>
